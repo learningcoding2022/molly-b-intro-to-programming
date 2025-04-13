@@ -1,17 +1,87 @@
+/***SECTIONS***/
+
 body {
   background-color:#677c69;
   color: #d8bc97;
+  margin-right: 40px;
+  margin-left: 40px;
+
+}
+
+#intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2em;
+}
+
+.intro-heading {
+    width: 80%;
+    justify-content: flex-end;
+}
+
+.intro-description {
+    width: 15%;
+    font-size: 1.5em;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#Experience {
+    flex-direction: column;
+
+}
+
+/***NAVIGATION***/
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+/***applying to both sections***/
+nav ul li {
+    padding-right: 20px;
+}
+
+/***HEADINGS***/
+
+.logo p {
+    font-weight: bold;
+}
+
+nav p {
+    font-size: 1.5em;
+}
+
+nav li a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #d8bc97;
 }
 
 h1 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 4em;
+  font-size: 7em;
+  margin-top: 180px;
 }
 
 h2 {
   font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.intro-decription h2 {
+font-family: "Lato", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
