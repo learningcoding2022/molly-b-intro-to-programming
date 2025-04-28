@@ -30,9 +30,20 @@ body {
 }
 
 #Experience {
+  display: flex;
+  flex-direction: column;
     ul {
         padding-left: 0px;
         flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    #work {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding-top: 4em;
     }
 }
 
