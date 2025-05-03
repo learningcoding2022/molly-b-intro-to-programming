@@ -1,3 +1,8 @@
+
+
+/***DESKTOP MEDIA QUERIES***/
+
+
 /***SECTIONS***/
 
 body {
@@ -240,4 +245,64 @@ footer .copyright {
   text-align: center;
   width: 100%;
   font-size: 1em;
+}
+
+/****************************************************************************************/
+
+/***MOBILE MEDIA QUERIES***/
+
+@media (max-width: 600px) {
+
+/***sections***/
+
+body {
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+#intro {
+    flex-direction: column;
+    width: 100%;
+}
+
+.intro-heading {
+    width: 100%;
+}
+
+.intro-description {
+  width: 100%;
+}
+
+/***Headings***/
+
+h1 {
+  margin-top: 0px;
+  font-size: 3em;
+}
+
+}
+
+/*************************************************************************************/
+/***TABLET DESIGN*****/
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+/***SECTIONS***/
+
+#intro {
+    flex-direction: column;
+    width: 100%;
+}
+
+.intro-description {
+  width: 100%;
+}
+
+/***HEADINGS***/
+
+h1 {
+font-size: 4em;
+}
+
+
 }
