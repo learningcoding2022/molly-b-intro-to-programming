@@ -30,20 +30,48 @@ body {
 }
 
 #Experience {
-  display: flex;
-  flex-direction: column;
+  /**display: flex;**/
+  /***flex-direction: column;**/
+  border: solid 2px coral;
     ul {
         padding-left: 0px;
         flex-direction: column;
         width: 100%;
         text-align: center;
+        
     }
 
     #work {
       display: flex;
-      flex-direction: row;
       justify-content: space-around;
       padding-top: 4em;
+
+      ul li {
+        border: solid 2px #d8bc97;
+      }
+    }
+
+    .experience-eduction {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .experience-work {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .experience-box-1 {
+      padding-top: 3em;
+      padding-bottom: 3em;
+      border: solid 2px #d8bc97;
+    }
+
+    .experience-box-2 {
+      margin-top: 3em;
+      padding-top: 3em;
+      padding-bottom: 3em;
+      border: solid 2px #d8bc97;
     }
 }
 
