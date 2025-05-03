@@ -273,6 +273,12 @@ body {
   width: 100%;
 }
 
+#coursework {
+  flex-direction: column;
+  background-color: pink;
+
+}
+
 /***Headings***/
 
 h1 {
@@ -296,11 +302,17 @@ h1 {
 
 .intro-description {
   width: 100%;
+  margin-bottom: 1em;
+}
+
+.work-item {
+  width:100%;
 }
 
 /***HEADINGS***/
 
 h1 {
+  margin-top: 0px;
 font-size: 4em;
 }
 
