@@ -47,6 +47,11 @@ body {
     }
 }
 
+#Skills ul {
+  display: flex;
+  flex-direction: column;
+}
+
 /***NAVIGATION***/
 nav {
     display: flex;
