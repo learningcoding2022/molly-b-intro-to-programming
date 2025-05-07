@@ -155,12 +155,12 @@ p {
 
 /***Footer***/
 
-footer {
+#Connect {
   text-align: center;
   flex-direction: column;
 }
 
-footer p {
+#Connect p {
   margin: 0;
   justify-content: center;
   text-align: center;
@@ -176,14 +176,14 @@ footer p {
   font-size: 20px;
 }
 
-footer .content-wrapper {
+#Connect .content-wrapper {
   max-width: 640px;
   width: 80%;
   margin: 50px 0;
   align-items: center;
 }
 
-footer .contact {
+#Connect .contact {
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
@@ -191,7 +191,7 @@ footer .contact {
   text-align: center;
 }
 
-footer .contact-info p {
+#Connect .contact-info p {
   color: #d8bc97;
   text-align: center;
 
@@ -211,23 +211,23 @@ footer .contact-info p {
   margin-top: 30px;
 }
 
-footer .social-icons {
+#Connect .social-icons {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-footer .social-icons p {
+#Connect .social-icons p {
   display: flex;
   flex-wrap: wrap;
 }
 
-footer .social-icons p i {
+#Connect .social-icons p i {
   font-size: 2em;
   color: #e9b14c;
 }
 
-footer .copyright {
+#Connect .copyright {
   margin: 0;
   margin-top: 80px;
   justify-content: center;
@@ -263,7 +263,19 @@ footer .copyright {
 
   #coursework {
     flex-direction: column;
-    background-color: pink;
+    align-items: center;
+  }
+
+  #box-2 {
+    margin-top: 3em;
+  }
+
+  .experience-box {
+    width: 70%;
+  }
+
+  .work-item {
+    width: 70%;
   }
 
   /***Headings***/
@@ -277,7 +289,7 @@ footer .copyright {
 /*************************************************************************************/
 /***TABLET DESIGN*****/
 
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1024px) {
   /***SECTIONS***/
 
   #intro {
@@ -292,6 +304,13 @@ footer .copyright {
 
   .work-item {
     width: 100%;
+  }
+
+  #coursework {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    background-color: pink;
   }
 
   /***HEADINGS***/
