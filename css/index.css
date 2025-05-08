@@ -79,6 +79,20 @@ body {
   padding-bottom: 3em;
 }
 
+/***Skills Section***/
+#code-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+#code-skills li {
+  padding: 3em;
+  width: 15%;
+  text-align: center;
+}
+
 /***NAVIGATION***/
 nav {
   display: flex;
