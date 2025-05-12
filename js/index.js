@@ -25,12 +25,14 @@ for (let i = 0; i < skills.length; i++) {
 
 //message form
 const messageForm = document.forms['leave_message'];
-messageForm.addEventListener() {
-  const usersName = event.target.usersName;
+messageForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const usersName = event.target.usersName.value;
   console.log(usersName);
-  const email = event.target.usersEmail;
-  console.log(email);
-  const usersMessage = event.target.usersMessage;
+  const usersEmail = event.target.usersEmail.value;
+  console.log(usersEmail);
+  const usersMessage = event.target.usersMessage.value;
   console.log(usersMessage);
-}
-
+  //reset form
+  messageForm.reset();
+});
