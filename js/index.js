@@ -23,3 +23,14 @@ for (let i = 0; i < skills.length; i++) {
   skillsList.appendChild(skill);
 }
 
+//message form
+const messageForm = document.forms['leave_message'];
+messageForm.addEventListener() {
+  const usersName = event.target.usersName;
+  console.log(usersName);
+  const email = event.target.usersEmail;
+  console.log(email);
+  const usersMessage = event.target.usersMessage;
+  console.log(usersMessage);
+}
+
