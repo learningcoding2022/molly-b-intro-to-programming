@@ -59,5 +59,20 @@ messageForm.addEventListener('submit', function(event) {
   messageList.append(newMessage);
 
   //messageList
-
 });
+
+//fetch is the default for GET
+  fetch('https://api.github.com/users/{learningcoding2022}/')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Request failed');
+    }
+    return response.json(); // Parse the response as JSON
+  })
+  .then(data => {
+    console.log(data); // Do something with the data
+  })
+  .catch(error => {
+    console.error('An error occurred:', error);
+  });
+
