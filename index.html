@@ -37,10 +37,11 @@
           <p>&lt;MB&gt;</p>
         </div>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#nav">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#leave-message">Message</a></li>
+          <li><a href="#Connect">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -119,6 +120,22 @@
         <h2>Skills.</h2>
         <ul id="code-skills"></ul>
       </div>
+    </section>
+    <section id="leave-message">
+      <h2>Leave A Message</h2>
+      <form name="leave_message">
+        <label for="usersName">Name:</label><br />
+        <input type="text" name="usersName" id="usersName" required />
+        <label for="usersEmail">Email:</label><br />
+        <input type="email" name="usersEmail" id="usersEmail" required />
+        <label for="usersMessage">Message:</label><br />
+        <textarea name="usersMessage" id="usersMessage" required></textarea>
+        <button type="Submit">Submit</button>
+      </form>
+    </section>
+    <section id="messages">
+      <h2>Messages</h2>
+      <ul></ul>
     </section>
     <section id="Connect">
       <div class="content-wrapper">

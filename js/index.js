@@ -23,3 +23,41 @@ for (let i = 0; i < skills.length; i++) {
   skillsList.appendChild(skill);
 }
 
+//message form
+const messageForm = document.forms['leave_message'];
+messageForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const usersName = event.target.usersName.value;
+  console.log(usersName);
+  const usersEmail = event.target.usersEmail.value;
+  console.log(usersEmail);
+  const usersMessage = event.target.usersMessage.value;
+  console.log(usersMessage);
+
+  const messageSection = document.querySelector('#messages');
+  const messageList = messageSection.querySelector('ul');
+  const newMessage = document.createElement('li');
+  newMessage.innerHTML =` 
+  <a href="mailto:${usersEmail}">${usersName}</a>
+  <span>${usersMessage}</span>`
+
+  //reset form
+  messageForm.reset();
+  const removeButton = document.createElement('button');
+  removeButton.innerHTML = 'remove';
+  removeButton.type = 'button';
+  removeButton.classList.add('remove-btn');
+
+  //add event listener to removeButton element that handles the "Click" event
+  removeButton.addEventListener('click', function() {
+    const entry = removeButton.parentNode;
+    entry.remove();
+  });
+
+  //append the removeButton to the newMessage element
+  newMessage.appendChild(removeButton);
+  messageList.append(newMessage);
+
+  //messageList
+
+});

@@ -30,6 +30,7 @@ body {
   font-style: normal;
 }
 
+/***EXPERIENCE SECTION***/
 #Experience {
   display: flex;
   flex-direction: column;
@@ -43,10 +44,15 @@ body {
 }
 
 #coursework {
-  display: flex;
-  flex-direction: row;
+  /***display: flex;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-around;**/
+  align-items: center;
+  padding-top: 4em;
+}
+
+#box-2 {
+  margin-top: 3em;
 }
 
 #work {
@@ -105,9 +111,41 @@ ul {
   flex-direction: row;
 }
 
-/***applying to both sections***/
 nav ul li {
   padding-right: 20px;
+}
+
+/***FORM***/
+
+#leave-message form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25em;
+}
+
+label[for='usersName'],
+label[for='usersEmail'],
+label[for='usersMessage'] {
+  color: #d8bc97;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#usersName,
+#usersEmail,
+#usersMessage {
+  padding: 0.75em 10em;
+}
+
+#usersName,
+#usersEmail,
+#usersMessage {
+  padding: 1em 10em;
+  border-radius: 100vw;
+  margin-bottom: 2em;
+  border: none;
+  outline: none;
 }
 
 /***HEADINGS***/
@@ -164,8 +202,27 @@ p {
   font-size: 1.5em;
 }
 
-/**soft pink: #ead2cf;
+/***Buttons***/
 
+button {
+  padding: 0.5em 3em;
+  border-radius: 100vw;
+  color: #677c69;
+  font-weight: bold;
+  font-size: 1.5em;
+  background-color: #e9b14c;
+  border: none;
+}
+
+.remove-btn {
+  padding: 0.5em 3em;
+  border-radius: 100vw;
+  color: #677c69;
+  font-weight: bold;
+  font-size: 1.5em;
+  background-color: #e9b14c;
+  border: none;
+}
 
 /***Footer***/
 
@@ -208,11 +265,11 @@ p {
 #Connect .contact-info p {
   color: #d8bc97;
   text-align: center;
+}
 
-  a {
-    color: #d8bc97;
-    text-decoration: none;
-  }
+#Connect .contact-info p a {
+  color: #d8bc97;
+  text-decoration: none;
 }
 
 #contact img {
@@ -257,6 +314,12 @@ p {
 @media (max-width: 600px) {
   /***sections***/
 
+  nav {
+    max-width: 100vw;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+  }
+
   body {
     display: block;
     width: 100%;
@@ -286,6 +349,7 @@ p {
     width: 90%;
   }
 
+  /***EXPERIENCE SECTION***/
   #coursework {
     flex-direction: column;
     align-items: center;
@@ -303,6 +367,12 @@ p {
     width: 70%;
   }
 
+  /***MESSAGE***/
+  #usersName,
+  #usersEmail,
+  #usersMessage {
+    padding: 0.75em 6em;
+  }
   /***Headings***/
 
   h1 {
