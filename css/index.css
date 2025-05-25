@@ -99,6 +99,27 @@ body {
   text-align: center;
 }
 
+/***Projects Section***/
+
+#repo-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 2%;
+}
+
+.repoItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.repoRow {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
 /***NAVIGATION***/
 nav {
   display: flex;

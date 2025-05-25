@@ -62,7 +62,7 @@ messageForm.addEventListener('submit', function(event) {
 });
 
 //fetch is the default for GET
-  fetch('https://api.github.com/users/learningcoding2022/repos')
+  fetch('https://api.github.com/users/learningcoding2022/repos?per_page=100')
   //get the response
   .then(response => {
     if (!response.ok) {
@@ -73,9 +73,21 @@ messageForm.addEventListener('submit', function(event) {
 
   //get the data and add it to the html
   .then((data) => {
-    const repositories = [...data];
-    console.log("repositories= ", repositories);
-  
+    console.log("All repo names from GitHub:", data.map(repo => repo.name));
+    //const repositories = [...data];
+    //console.log("repositories= ", repositories);
+    const allowedRepos = [
+    "Portfolio-page",
+    "news-homepage",
+    "less-9-unplugged-responsive",
+    "JS-Lesson-14-Github-Repo-Gallery",
+    "JS-Less13-Guess-the-Word",
+    "sticky-note-UI"
+  ];
+
+    const repositories = data.filter(repo => allowedRepos.includes(repo.name));
+    console.log("Filtered repositories: ", repositories);
+
 
       //find the project section and ul
     const projectSection = document.getElementById('Projects');
@@ -101,8 +113,15 @@ messageForm.addEventListener('submit', function(event) {
       repositoryName.innerText = `${repositories[i].name}`;
       console.log('repositoryName');
 
+      //repo description
+      //const repositoryDescription = document.createElement('DIV');
+      //repositoryDescription.description = "repoDescription";
+      //repositoryDescription.innerText = `${repositories[i].description}`;
+      //console.log('repositoryDescription');
+
       //adding items so they show up
       repositoryRow.appendChild(repositoryName);
+      //repositoryRow.appendChild(repositoryDescription);
       project.appendChild(repositoryRow);
       projectList.appendChild(project);
     }
