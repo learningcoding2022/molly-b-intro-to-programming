@@ -62,17 +62,55 @@ messageForm.addEventListener('submit', function(event) {
 });
 
 //fetch is the default for GET
-  fetch('https://api.github.com/users/{learningcoding2022}/')
+  fetch('https://api.github.com/users/learningcoding2022/repos')
+  //get the response
   .then(response => {
     if (!response.ok) {
       throw new Error('Request failed');
     }
     return response.json(); // Parse the response as JSON
   })
-  .then(data => {
-    console.log(data); // Do something with the data
+
+  //get the data and add it to the html
+  .then((data) => {
+    const repositories = [...data];
+    console.log("repositories= ", repositories);
+  
+
+      //find the project section and ul
+    const projectSection = document.getElementById('Projects');
+
+    const projectList = projectSection.querySelector('#repo-list');
+  
+
+  //create a repositories list by looping over the repositories array
+    for (let i = 0; i < repositories.length; i++) {
+      // Inside the loop, create a variable named project to make a new list item (li) element; hint: createElement method
+      const project = document.createElement('LI');
+      // On the next line, set the inner text of your project variable to the current Array element's name property; hint: access the Array element using bracket notation
+      project.className= "repo-list";
+      //On the next line, append the project element to the projectList element; hint: appendChild method
+
+      //create a row to put the repo name and description in
+      const repositoryRow = document.createElement('DIV');
+      repositoryRow.className = "repoRow";
+
+      //repo name
+      const repositoryName = document.createElement('DIV');
+      repositoryName.className = "repoName";
+      repositoryName.innerText = `${repositories[i].name}`;
+      console.log('repositoryName');
+
+      //adding items so they show up
+      repositoryRow.appendChild(repositoryName);
+      project.appendChild(repositoryRow);
+      projectList.appendChild(project);
+    }
   })
+
   .catch(error => {
     console.error('An error occurred:', error);
   });
+
+
 
