@@ -104,7 +104,7 @@ body {
 #repo-list {
   list-style: none;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   gap: 2%;
 }
