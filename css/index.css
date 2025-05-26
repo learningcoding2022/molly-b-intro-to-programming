@@ -105,6 +105,7 @@ body {
   list-style: none;
   display: grid;
   grid-template-columns: auto;
+  justify-content: center;
   gap: 2%;
 }
 
@@ -118,6 +119,9 @@ body {
   display: flex;
   flex-direction: row;
   gap: 1em;
+  border: solid 2px #d8bc97;
+  margin-top: 3em;
+  padding: 1em;
 }
 
 /***NAVIGATION***/
