@@ -39,7 +39,7 @@ messageForm.addEventListener('submit', function(event) {
   const newMessage = document.createElement('li');
   newMessage.innerHTML =` 
   <a href="mailto:${usersEmail}">${usersName}</a>
-  <span>${usersMessage}</span>`
+  <span>${usersMessage}</span>`;
 
   //reset form
   messageForm.reset();
