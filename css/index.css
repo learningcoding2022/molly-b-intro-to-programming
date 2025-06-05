@@ -3,8 +3,10 @@
 /***SECTIONS***/
 
 body {
-  background-color: #677c69;
-  color: #d8bc97;
+  /***background-color: #677c69;***/
+  background-color: #4a5f4d;
+  /***color: #d8bc97;***/
+  color: #e8d8be;
   margin: 0;
   padding: 6em;
   width: 100%;
@@ -65,7 +67,7 @@ body {
 }
 
 #work ul li {
-  border: solid 2px #d8bc97;
+  border: solid 2px #e8d8be;
 }
 
 .work-item {
@@ -73,7 +75,7 @@ body {
   margin-top: 3em;
   padding-top: 3em;
   padding-bottom: 3em;
-  border: solid 2px #d8bc97;
+  border: solid 2px #e8d8be;
 }
 
 .experience-eduction {
@@ -82,7 +84,7 @@ body {
 }
 
 .experience-box {
-  border: solid 2px #d8bc97;
+  border: solid 2px #e8d8be;
   width: 40%;
   padding-top: 3em;
   padding-bottom: 3em;
@@ -127,7 +129,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 1em;
-  border: solid 2px #d8bc97;
+  border: solid 2px #e8d8be;
   margin-top: 3em;
   padding: 1em;
 }
@@ -140,7 +142,8 @@ body {
 }
 
 /***NAVIGATION***/
-nav {
+
+nav .content-wrapper {
   display: flex;
   justify-content: space-between;
 }
@@ -149,6 +152,7 @@ ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 nav ul li {
@@ -167,7 +171,7 @@ nav ul li {
 label[for='usersName'],
 label[for='usersEmail'],
 label[for='usersMessage'] {
-  color: #d8bc97;
+  color: #e8d8be;
   font-weight: bold;
   font-size: 1.5em;
 }
@@ -201,7 +205,7 @@ nav p {
 nav li a {
   font-size: 1em;
   text-decoration: none;
-  color: #d8bc97;
+  color: #e8d8be;
 }
 
 h1 {
@@ -284,18 +288,11 @@ button {
 #contact a {
   justify-content: center;
   text-align: center;
-  color: #d8bc97;
+  color: #e8d8be;
   font-family: 'Nunito Sans', sans-serif;
   text-transform: lowercase;
   font-style: normal;
   font-size: 20px;
-}
-
-#Connect .content-wrapper {
-  /*max-width: 640px;
-  width: 80%;
-  margin: 50px 0;
-  align-items: center;*/
 }
 
 #Connect .contact {
@@ -307,12 +304,12 @@ button {
 }
 
 #Connect .contact-info p {
-  color: #d8bc97;
+  color: #e8d8be;
   text-align: center;
 }
 
 #Connect .contact-info p a {
-  color: #d8bc97;
+  color: #e8d8be;
   text-decoration: none;
 }
 
@@ -379,6 +376,12 @@ button {
 
   nav ul {
     padding-left: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    padding-right: 0px;
   }
 
   nav ul a {
