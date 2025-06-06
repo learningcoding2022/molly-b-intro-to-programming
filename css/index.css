@@ -3,10 +3,15 @@
 /***SECTIONS***/
 
 body {
-  background-color: #677c69;
-  color: #d8bc97;
-  margin-right: 10em;
-  margin-left: 10em;
+  /***background-color: #677c69;***/
+  background-color: #4a5f4d;
+  /***color: #d8bc97;***/
+  color: #e8d8be;
+  margin: 0;
+  padding: 6em;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 #intro {
@@ -62,7 +67,7 @@ body {
 }
 
 #work ul li {
-  border: solid 2px #d8bc97;
+  border: solid 2px #e8d8be;
 }
 
 .work-item {
@@ -70,7 +75,7 @@ body {
   margin-top: 3em;
   padding-top: 3em;
   padding-bottom: 3em;
-  border: solid 2px #d8bc97;
+  border: solid 2px #e8d8be;
 }
 
 .experience-eduction {
@@ -79,13 +84,17 @@ body {
 }
 
 .experience-box {
-  border: solid 2px #d8bc97;
+  border: solid 2px #e8d8be;
   width: 40%;
   padding-top: 3em;
   padding-bottom: 3em;
 }
 
 /***Skills Section***/
+#Skills h2 {
+  padding-top: 2.5em;
+}
+
 #code-skills {
   display: flex;
   justify-content: center;
@@ -97,10 +106,44 @@ body {
   padding: 3em;
   width: 15%;
   text-align: center;
+  position: relative;
+}
+
+/***Projects Section***/
+
+#repo-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 2%;
+}
+
+.repoItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.repoRow {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  border: solid 2px #e8d8be;
+  margin-top: 3em;
+  padding: 1em;
+}
+
+/**Messages**/
+#messages ul {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 /***NAVIGATION***/
-nav {
+
+nav .content-wrapper {
   display: flex;
   justify-content: space-between;
 }
@@ -109,6 +152,7 @@ ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 nav ul li {
@@ -127,7 +171,7 @@ nav ul li {
 label[for='usersName'],
 label[for='usersEmail'],
 label[for='usersMessage'] {
-  color: #d8bc97;
+  color: #e8d8be;
   font-weight: bold;
   font-size: 1.5em;
 }
@@ -161,7 +205,7 @@ nav p {
 nav li a {
   font-size: 1em;
   text-decoration: none;
-  color: #d8bc97;
+  color: #e8d8be;
 }
 
 h1 {
@@ -169,7 +213,7 @@ h1 {
   font-weight: 300;
   font-style: normal;
   font-size: 6.5em;
-  margin-top: 180px;
+  margin-top: 60px;
 }
 
 h2 {
@@ -217,9 +261,13 @@ button {
 .remove-btn {
   padding: 0.5em 3em;
   border-radius: 100vw;
+  align-self: flex-end;
+  display: inline-block;
+  max-width: 60%;
+  gap: 2%;
   color: #677c69;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 0.5em;
   background-color: #e9b14c;
   border: none;
 }
@@ -227,7 +275,7 @@ button {
 /***Footer***/
 
 #Connect {
-  text-align: center;
+  display: flex;
   flex-direction: column;
 }
 
@@ -240,18 +288,11 @@ button {
 #contact a {
   justify-content: center;
   text-align: center;
-  color: #d8bc97;
+  color: #e8d8be;
   font-family: 'Nunito Sans', sans-serif;
   text-transform: lowercase;
   font-style: normal;
   font-size: 20px;
-}
-
-#Connect .content-wrapper {
-  max-width: 640px;
-  width: 80%;
-  margin: 50px 0;
-  align-items: center;
 }
 
 #Connect .contact {
@@ -263,12 +304,12 @@ button {
 }
 
 #Connect .contact-info p {
-  color: #d8bc97;
+  color: #e8d8be;
   text-align: center;
 }
 
 #Connect .contact-info p a {
-  color: #d8bc97;
+  color: #e8d8be;
   text-decoration: none;
 }
 
@@ -298,6 +339,10 @@ button {
   color: #e9b14c;
 }
 
+#Connect .footer-content h3 {
+  text-align: center;
+}
+
 #Connect .copyright {
   margin: 0;
   margin-top: 80px;
@@ -314,17 +359,33 @@ button {
 @media (max-width: 600px) {
   /***sections***/
 
+  body {
+    margin: 0;
+    padding: 2em;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
   nav {
     max-width: 100vw;
+    display: flex;
     overflow-x: hidden;
     flex-wrap: wrap;
   }
 
-  body {
-    display: block;
-    width: 100%;
-    margin-right: 2em;
-    margin-left: 2em;
+  nav ul {
+    padding-left: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    padding-right: 0px;
+  }
+
+  nav ul a {
+    font-size: 5vw;
   }
 
   #intro {
@@ -367,11 +428,22 @@ button {
     width: 70%;
   }
 
+  /***SKILLS***/
+  #code-skills li {
+    padding: 0.75em;
+  }
+
+  /***PROJECTS***/
+  #repo-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   /***MESSAGE***/
   #usersName,
   #usersEmail,
   #usersMessage {
     padding: 0.75em 6em;
+    width: 50%;
   }
   /***Headings***/
 
@@ -405,7 +477,6 @@ button {
     display: flex;
     align-items: flex-start;
     flex-direction: row;
-    background-color: pink;
   }
 
   /***HEADINGS***/
